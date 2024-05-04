@@ -11,16 +11,3 @@ def send_feishu_msg(msg):
     print('robot alert response: ', post_response)
     return post_response
 
-
-if __name__ == "__main__":
-    # POST请求示例
-    # resp = send_feishu_msg('直播告警')
-    # print("POST Response:", resp)
-    from datetime import datetime, date, timedelta
-    now = datetime.now()
-    next = datetime.now() + timedelta(minutes=10)
-    if next > now:
-        print('good bigger')
-    else:
-        print('bad smaller')
-

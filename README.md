@@ -27,7 +27,7 @@ playwright install chromium firefox
 ```
 
 ### 数据库表简介
-![数据库介绍]("https://github.com/KLordy/blog_img/blob/main/20240504172511.png")
+![数据库介绍](https://github.com/KLordy/blog_img/blob/main/20240504172511.png)
 
 各个字段的介绍可以参考create_db.sql脚本，各个表的主要作用如下：
 - download_video_info： 记录视频的状态

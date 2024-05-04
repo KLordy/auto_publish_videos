@@ -5,7 +5,7 @@
 ### 工作流程图
 该项目主旨是完成一套全自动的视频采集 + 自动去重 + 自动上传的咔咔咔money printer system.
 
-![github]("https://github.com/KLordy/blog_img/blob/main/20240501153309.png" "工作流")
+![工作流]("https://github.com/KLordy/blog_img/blob/main/20240501153309.png")
 
 ### Feature
 - [x] 定期自动采集视频数据
@@ -27,7 +27,7 @@ playwright install chromium firefox
 ```
 
 ### 数据库表简介
-![github]("https://github.com/KLordy/blog_img/blob/main/20240504172511.png" "mysql简介")
+![数据库介绍]("https://github.com/KLordy/blog_img/blob/main/20240504172511.png")
 
 各个字段的介绍可以参考create_db.sql脚本，各个表的主要作用如下：
 - download_video_info： 记录视频的状态

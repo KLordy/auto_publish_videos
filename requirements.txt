@@ -1,0 +1,17 @@
+APScheduler==3.10.4
+ffmpeg==1.4
+ffmpeg_python==0.2.0
+nltk==3.8.1
+numpy==1.22.0
+openai_whisper==20231117
+opencv_python==4.8.1.78
+opencv_python_headless==4.9.0.80
+Pillow==10.0.1
+Pillow==10.3.0
+playwright==1.40.0
+PyAutoGUI==0.9.54
+pydub==0.25.1
+pyperclip==1.8.2
+Requests==2.31.0
+SQLAlchemy==2.0.28
+upload==0.1.1

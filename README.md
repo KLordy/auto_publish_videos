@@ -5,7 +5,7 @@
 ### 工作流程图
 该项目主旨是完成一套全自动的视频采集 + 自动去重 + 自动上传的咔咔咔money printer system.
 
-![工作流]("https://github.com/KLordy/blog_img/blob/main/20240501153309.png")
+![工作流](https://github.com/KLordy/blog_img/blob/main/20240501153309.png)
 
 ### Feature
 - [x] 定期自动采集视频数据

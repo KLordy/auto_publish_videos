@@ -1,13 +1,13 @@
-###更新说明
+### 更新说明
 
 - 20240504：初次更新，因为这个系统是完全自制自用的，而且因为和数据库进行交互，中间可能会存在部分内容在介绍中有所疏忽，如果有问题可以看最后的联系方式进行反馈，对应问题会定期同步更新文档。
 
-###工作流程图
+### 工作流程图
 该项目主旨是完成一套全自动的视频采集 + 自动去重 + 自动上传的咔咔咔money printer system.
 
 ![github]("https://github.com/KLordy/blog_img/blob/main/20240501153309.png" "工作流")
 
-###Feature
+### Feature
 - [x] 定期自动采集视频数据
 - [x] 视频自动下载
 - [x] 自动批量去重
@@ -17,7 +17,7 @@
 - [ ] 抖音自动上传
 - [ ] cookie独立更新
 
-###Installation
+### Installation
 - 安装mysql - 自行查阅资料
 - 在mysql命令行中执行create_db.sql中代码进行db初始化建表
 - 修改model.py中数据库连接信息： ``engine = create_engine('mysql+pymysql://root:root%40123@localhost:3306/video_tools')``
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 playwright install chromium firefox
 ```
 
-###数据库表简介
+### 数据库表简介
 ![github]("https://github.com/KLordy/blog_img/blob/main/20240504172511.png" "mysql简介")
 
 各个字段的介绍可以参考create_db.sql脚本，各个表的主要作用如下：
@@ -39,9 +39,9 @@ playwright install chromium firefox
 - shipinhao_user_info：主要记录视频号账户的cookie，以及限定账号的发布频率（频率过高可能会被风控判定为营销号出现0播、限流）
 - homepage_scan_record：进行数据采集的用户爬取频率控制表，主要是通过时间纬度来进行限定，因为采用的是破解付费接口，所以这里对接口访问做了限流策略，避免被风控。
 
-###任务配置说明
+### 任务配置说明
 
-####视频下载采集任务配置介绍
+#### 视频下载采集任务配置介绍
 process_homepage_download 和 download_videos 均读取download_config.ini配置，不过这个下载任务因为涉及破解第三方付费软件的采集下载接口，不宜进行开源，这部分内容需要各位自行补全；
 或者如果没有开发能力的非技术人员，可以考虑直接自己先通过市面上的小程序或者免费的途径下载好需要下载的视频，然后统一存储到某个文件夹，然后使用后面的批量去重功能来进行视频导入。
 对于有开发能力的技术同行，可以考虑自行破解或是购买相关接口来补全即可。
@@ -98,7 +98,7 @@ target_account = 佳佳好物推荐
 save_path = /Users/zhonghao/PycharmProjects/video_ai/output/download_video
 ```
 
-####自动去重任务配置介绍
+#### 自动去重任务配置介绍
 
 dedup_video_from_db任务配置如下：
 ```ini
@@ -220,14 +220,14 @@ enable_texture_syn = True
 enable_edge_blur = True
 ```
 
-####自动上传任务
+#### 自动上传任务
 任务主类sph_uploader，该任务完全读取来自download_video_info表中的deduplicated状态去重完毕的视频，上传到指定账号中，不存在ini配置文件。
 
-###参考项目
+### 参考项目
 https://github.com/dreammis/social-auto-upload
 其中涉及h264不支持的问题，参考以上rep中提示，替换浏览器执行路径
 
-###Communicate
+### Communicate
 探讨自动化上传、自动去重、自动剪辑、自动视频制作等内容，
 可加v联系进群：KLordy
 备注：github

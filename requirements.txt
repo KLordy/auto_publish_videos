@@ -6,7 +6,6 @@ numpy==1.22.0
 openai_whisper==20231117
 opencv_python==4.8.1.78
 opencv_python_headless==4.9.0.80
-Pillow==10.0.1
 Pillow==10.3.0
 playwright==1.40.0
 PyAutoGUI==0.9.54

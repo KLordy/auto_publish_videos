@@ -252,10 +252,10 @@ def 每隔x帧随机选择一帧加随机模糊区域(images, gap, gauss_kernel,
     for i in range(0, steps):
         start = i * gap
         end = (i + 1) * gap
-        if end > image_size:
-            end = image_size - 1
+        if end >= image_size:
+            end = image_size
         change_frame = random.randint(start, end)
-        for j in range(start, end + 1):
+        for j in range(start, end):
             if j != change_frame:
                 result.append(images[j])
             else:
